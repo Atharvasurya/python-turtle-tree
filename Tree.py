@@ -1,3 +1,4 @@
+#ATHARVA SURYAWANSHI 
 import turtle
 import random
 
@@ -14,7 +15,7 @@ def tree(size, depth):
       turt.right(TURN_ANGLE)
       tree(size*SHRINK_FACTOR, depth-1)
       turt.right(TURN_ANGLE)
-      tree(size*SHRINK_FACTOR, depth-1)
+      tree(size*SHRINK_FACTOR, depth-2)
       turt.left(3*TURN_ANGLE)
       tree(size*SHRINK_FACTOR, depth-1)
       turt.left(TURN_ANGLE)
@@ -30,10 +31,10 @@ def get_color(depth):
     return 'green'
 
 if __name__ == '__main__':
-  random.seed(46)
+  random.seed(47)
   turt = turtle.Turtle()
   turt.setheading(90)
   turt.speed(0)
-  turtle.colormode(255)
+  turtle.colormode(900)
   tree(100, BRANCH_COUNT)
   turtle.done()
